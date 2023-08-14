@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, 100, 100);
+
+        ctx.fillStyle = "rgb(152, 20, 80, .5)";
+        ctx.fillRect(50, 50, 100, 100);
+
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.moveTo(150, 100);
+        ctx.lineTo(250, 150);
+        ctx.lineTo(150, 250);
+        ctx.lineTo(150, 100);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.moveTo(300, 400);
+        ctx.lineTo(350, 150);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(50, 250,50, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(50, 380,50, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+    
+</body>
+</html>
